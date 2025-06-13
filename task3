@@ -1,0 +1,7 @@
+-- Задание 3. Удаление данных и таблиц
+-- Удаление данных
+DELETE from EmployeeDetails
+WHERE Salary < 50000;
+
+-- Удаление таблицы
+DROP TABLE if EXISTS EmployeeDetails;
