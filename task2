@@ -1,0 +1,8 @@
+-- Задание 2. Создание представления
+create view HighValueOrders as
+SELECT od.OrderID, o.OrderDate, SUM(od.Quantity * p.Price) as TotalAmount
+FROM OrderDetails od
+join Orders o ON od.OrderID = o.OrderID
+join Products p ON od.ProductID = p.ProductID
+group by od.OrderID, o.OrderDate
+HAVING SUM(od.Quantity * p.Price) > 10000;
