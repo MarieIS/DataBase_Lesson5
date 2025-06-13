@@ -1,0 +1,8 @@
+-- Задание 4. Создание хранимой процедуры
+create PROCEDURE GetProductSales(in p_ProductID integer) AS
+BEGIN
+  SELECT o.OrderID, o.OrderDate, o.CustomerID
+  from Orders o
+  join OrderDetails od on o.OrderID = od.OrderID
+  where od.ProductID = p_ProductID;
+end;
