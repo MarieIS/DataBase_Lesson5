@@ -1,0 +1,7 @@
+-- Задание 1. Создание таблицы и изменение данных
+CREATE TABLE EmployeeDetails(EmployeeID integer PRIMARY Key, EmployeeName text, Position text, HireDate date, Salary numeric);
+
+INSERT into EmployeeDetails
+VALUES (1, 'Mariia Ivanova', 'engineer', '2023.07.03', 60000),
+       (2, 'Leonid Grunin', 'engineer', '2005.01.01', 60000),
+       (3, 'Innokentiy Nikolaev', 'director', '2005.01.01', 60000);
